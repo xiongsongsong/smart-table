@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>标签设置-新增</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>当前已有标签</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th width="10%">ID</th>
+            <th width="20%">名称</th>
+            <th>标签分类</th>
+            <th>描述</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>云客服</td>
+            <td>渠道</td>
+            <td>云客服的描述信息</td>
+            <td>
+                <button type="button" class="btn btn-link btn-xs">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>交易退回</td>
+            <td>业务分类</td>
+            <td>对应菜单中的交易退回</td>
+            <td>
+                <button type="button" class="btn btn-link btn-xs">删除</button>
+            </td>
+        </tr>
+    </table>
+    <p class="text-right">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target=".add-tag-dialog">新增标签</button>
+    </p>
+</div>
+<!--Start 点击新增标签后的弹出层-->
+<div class="modal fade add-tag-dialog" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" data-keyboard="false" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">标签设置</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">请选择已有标签</label>
+
+                        <div class="col-sm-7">
+                            <select class="form-control">
+                                <option value="undefined">请选择触发事件</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">因子名称</label>
+
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">标签类型</label>
+
+                        <div class="col-sm-7">
+                            <select class="form-control">
+                                <option value="undefined">渠道</option>
+                                <option value="系统标识">系统标识</option>
+                                <option value="进线标识">进线标识</option>
+                                <option value="业务类型">业务类型</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">标签描述</label>
+
+                        <div class="col-sm-7">
+                            <textarea class="form-control" rows="5" placeholder="用户红包信息数据源，该因子专门使用在只能工作台中。"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">关联类型</label>
+
+                        <div class="col-sm-7 form-control-static">因子</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">状态</label>
+
+                        <div class="col-sm-7 form-control-static"><span class="label label-success">正常</span></div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">添加</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">取消</button>
+                </div>
+                <div class="form-group">
+                    <p class="text-right small">该记录在 2013-12-11 11:10:10<strong>刘志强</strong>创建 2013-12-12 12:20:15 <strong>神会</strong>最后修改</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End 点击新增标签后的弹出层-->
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>标签设置-新增</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <style>
+        .tab-pane {
+            padding: 12px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>数据原子模型基本信息</h2>
+
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">原子模型名称</label>
+
+            <div class="col-sm-7">
+                <input type="text" class="form-control" placeholder="用户红包信息数据"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">因子名称</label>
+
+            <div class="col-sm-7">
+                <textarea class="form-control"/></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">数据采集脚本</label>
+
+            <div class="col-sm-7">
+                <textarea class="form-control"/></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">数据标签</label>
+
+            <div class="col-sm-7">
+                <!---->
+                <ul class="nav nav-tabs" id="myTab">
+                    <li class="active"><a href=".J-tab-系统" data-toggle="tab">系统</a></li>
+                    <li><a href=".J-tab-近线标识" data-toggle="tab">近线标识</a></li>
+                    <li><a href=".J-tab-接口标签" data-toggle="tab">接口标签</a></li>
+                    <li><a href=".J-tab-模型分类" data-toggle="tab">模型分类</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active J-tab-系统">
+                        <button type="button" class="btn btn-info">CrmUserTask-batchQueryByCardNo-1</button>
+                        <a href="#" role="button"  data-toggle="tooltip"  class="btn btn-default popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a>
+                    </div>
+                    <div class="tab-pane J-tab-近线标识">近线标识</div>
+                    <div class="tab-pane J-tab-接口标签">接口标签</div>
+                    <div class="tab-pane J-tab-模型分类">模型分类</div>
+                </div>
+
+
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
