@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>标签设置-新增</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <h2>可用参数设置</h2>
+
+    <form class="form-horizontal" role="form" action="/test/test.do" method="post" data-send-type="ajax">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">参数名称</label>
+
+            <div class="col-sm-7">
+                <input type="text" name="param_name" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">参数描述</label>
+
+            <div class="col-sm-7">
+                <textarea name="param_describe" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">效验规则</label>
+
+            <div class="col-sm-7">
+                <input style="font-family: verdana;" type="text" name="regexp" class="form-control"/>
+            </div>
+        </div><div class="form-group">
+            <label class="col-sm-3 control-label">返回类型</label>
+
+            <div class="col-sm-7">
+                <select name="return_type" class="form-control">
+                    <option value="">整形</option>
+                    <option value="">布尔值</option>
+                    <option value="">字符串</option>
+                    <option value="">整形数组</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">入参类型</label>
+
+            <div class="col-sm-7">
+                <select class="form-control" name="param_type">
+                    <option value="可配置参数">可配置参数</option>
+                    <option value="可配置参数2">可配置参数2</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
