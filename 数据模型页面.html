@@ -35,9 +35,10 @@
 
             <div class="col-sm-7">
                 <textarea name="scripting" class="hide" data-srouce="#scripting"/></textarea>
-<div id="scripting" class="form-control" style="width:100%;height:100px">//请填写采集脚本
-var a=123;
-var b=123;</div>
+                <div id="scripting" class="form-control" style="width:100%;height:100px">//请填写参数脚本
+query.setBegin(param.get('param1'));//取得最近N笔
+query.setEnd(-7);//暂住证
+query.setBegin(0);</div>
             </div>
         </div>
         <div class="form-group">
@@ -156,8 +157,8 @@ var b=123;</div>
 <!--End 可用原子信息-->
 <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script src="ajax.js"></script>
 <script src="src/ace.js"></script>
+<script src="ajax.js"></script>
 
 <script>
     $(document.body).popover({
