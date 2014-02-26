@@ -14,10 +14,19 @@
         });
         return o;
     };
+
     var $document = $(document.body)
     $document.on('submit', 'form[data-send-type=ajax]', function (ev) {
         ev.preventDefault()
         var $form = $(this)
+
+
+        //同步可能存在的ACE编辑器
+        $form.find('[data-srouce]').each(function (index, item) {
+            var $item = $(item)
+            $item.val($($item.data('srouce')).data('editor').getValue())
+        })
+
         $.ajax({
             url: $form.attr('action'),
             type: $form.attr('method'),
