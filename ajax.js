@@ -23,7 +23,9 @@
             type: $form.attr('method'),
             dataType: 'json',
             data: {
-                data: JSON.stringify($form.serializeObject())
+                key: 1,
+                data: JSON.stringify($form.serializeObject()),
+                value: 3
             }
         }).done(function (data) {
                 console.log(data)
