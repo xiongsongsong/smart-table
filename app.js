@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname)))
 app.use(express.bodyParser({}));
 
 app.post('*', function (req, res) {
-    console.log(req.body)
+    req.body.data = JSON.parse(req.body.data)
     res.json(req.body)
 })
 

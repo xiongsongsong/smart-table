@@ -21,17 +21,15 @@
         $.ajax({
             url: $form.attr('action'),
             type: $form.attr('method'),
-            dataType: 'json',
+            dataType: 'text',
             data: {
-                key: 1,
-                data: JSON.stringify($form.serializeObject()),
-                value: 3
+                data: JSON.stringify($form.serializeObject())
             }
         }).done(function (data) {
-                console.log(data)
+                alert('提交给服务器的数据：\r\n' + data)
             }
         ).error(function () {
-
+                alert('请求失败')
             }
         )
     })
