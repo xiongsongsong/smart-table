@@ -4,8 +4,7 @@
     <meta charset="utf-8"/>
     <title>标签设置-新增</title>
     <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/css/bootstrap.min.css"/>
-    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://a.alipayobjects.com/u/js/201402/29TGRHsVYV.js"></script>
     <style>
         .tab-pane {
             padding: 12px 0;
@@ -13,6 +12,7 @@
     </style>
 </head>
 <body>
+<!--Start 数据原子模型基本信息-->
 <div class="container">
     <h2>数据原子模型基本信息</h2>
 
@@ -52,8 +52,18 @@
 
                 <div class="tab-content">
                     <div class="tab-pane active J-tab-系统">
-                        <button type="button" class="btn btn-info">CrmUserTask-batchQueryByCardNo-1</button>
-                        <a href="#" role="button"  data-toggle="tooltip"  class="btn btn-default popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a>
+
+                        <a href="#" class="btn btn-sm btn-info" data-toggle="popover" data-placement="auto"
+                           title="Crm系统查询用户批量任务近线模型"
+                           data-content="说明：该近线查询用户批量任务，接口为批量接口，具体信息请参见 http://www.baidu.com" role="button">标签001</a>
+                        <a href="#" class="btn btn-sm btn-info" data-toggle="popover" data-placement="auto"
+                           title="Crm系统查询用户批量任务近线模型"
+                           data-content="说明：该近线查询用户批量任务，接口为批量接口，具体信息请参见 http://www.baidu.com" role="button">标签001</a>
+                        <a href="#" class="btn btn-sm btn-info" data-toggle="popover" data-placement="auto"
+                           title="Crm系统查询用户批量任务近线模型"
+                           data-content="说明：该近线查询用户批量任务，接口为批量接口，具体信息请参见 http://www.baidu.com" role="button">标签001</a>
+
+
                     </div>
                     <div class="tab-pane J-tab-近线标识">近线标识</div>
                     <div class="tab-pane J-tab-接口标签">接口标签</div>
@@ -62,8 +72,91 @@
 
 
             </div>
+
+        </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-default">保存信息</button>
         </div>
     </form>
 </div>
+<!--End 数据原子模型基本信息-->
+
+<!--Start 入参条件设置-->
+<div class="container">
+    <h2>入参条件信息</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th width="5%">ID</th>
+            <th width="20%">参数名称</th>
+            <th width="30%">描述</th>
+            <th width="30%">业务配置表达式</th>
+            <th width="15%">操作</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href="#">默认测试设置参数</a></td>
+            <td>该部分设置基本参数用于测试，请按照如下要求修改进行测试：[用户2088账号]=[20882232323232] [用户交易号]=[2323232323223]</td>
+            <td>用户阿里巴巴账号[$:cardNo],用户交易号[$:tradeNo]</td>
+            <td class="text-center">
+                <button type="button" class="btn btn-link btn-xs">删除</button>
+                <button type="button" class="btn btn-link btn-xs">修改</button>
+            </td>
+        </tr>
+    </table>
+    <div class="text-center">
+        <button type="button" class="btn btn-default">添加</button>
+    </div>
+</div>
+<!--End 入参条件设置-->
+
+
+<!--Start 可用原子信息-->
+<div class="container">
+    <h2>入参条件信息</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th width="5%">ID</th>
+            <th width="20%">参数名称</th>
+            <th width="30%">描述</th>
+            <th width="20%">值域</th>
+            <th width="15%">结果类型</th>
+            <th width="10%">操作</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href="#">总提现金额</a></td>
+            <td>N笔信息的提现总金额</td>
+            <td>用户阿里巴巴账号[$:cardNo],用户交易号[$:tradeNo]</td>
+            <td></td>
+            <td class="text-center">
+                <button type="button" class="btn btn-link btn-xs">删除</button>
+                <button type="button" class="btn btn-link btn-xs">修改</button>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href="#">总提现金额</a></td>
+            <td>N笔信息的提现总金额</td>
+            <td>用户阿里巴巴账号[$:cardNo],用户交易号[$:tradeNo]</td>
+            <td>[单选][1:正常][2:异常]</td>
+            <td class="text-center">
+                <button type="button" class="btn btn-link btn-xs">删除</button>
+                <button type="button" class="btn btn-link btn-xs">修改</button>
+            </td>
+        </tr>
+    </table>
+    <div class="text-center">
+        <button type="button" class="btn btn-default">添加</button>
+    </div>
+</div>
+<!--End 可用原子信息-->
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script>
+    $(document.body).popover({
+        selector: '[data-toggle=popover]',
+        trigger: 'hover'
+    })
+</script>
 </body>
 </html>
