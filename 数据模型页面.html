@@ -16,26 +16,26 @@
 <div class="container">
     <h2>数据原子模型基本信息</h2>
 
-    <form class="form-horizontal" role="form">
+    <form class="form-horizontal" role="form" action="/test/test.do" method="post" data-send-type="ajax">
         <div class="form-group">
             <label class="col-sm-3 control-label">原子模型名称</label>
 
             <div class="col-sm-7">
-                <input type="text" class="form-control" placeholder="用户红包信息数据"/>
+                <input type="text" name="atomic_model_name" class="form-control" placeholder="用户红包信息数据"/>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-3 control-label">因子名称</label>
+            <label class="col-sm-3 control-label">描述信息</label>
 
             <div class="col-sm-7">
-                <textarea class="form-control"/></textarea>
+                <textarea name="atomic_describe" class="form-control"/></textarea>
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-3 control-label">数据采集脚本</label>
 
             <div class="col-sm-7">
-                <textarea class="form-control"/></textarea>
+                <textarea name="scripting" class="form-control"/></textarea>
             </div>
         </div>
         <div class="form-group">
@@ -75,7 +75,7 @@
 
         </div>
         <div class="text-center">
-            <button type="button" class="btn btn-default">保存信息</button>
+            <button type="submit" class="btn btn-default">保存信息</button>
         </div>
     </form>
 </div>
@@ -152,6 +152,8 @@
 <!--End 可用原子信息-->
 <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="ajax.js"></script>
+
 <script>
     $(document.body).popover({
         selector: '[data-toggle=popover]',
