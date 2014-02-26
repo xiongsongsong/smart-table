@@ -11,7 +11,8 @@ var mimeMap = {
     'gif': 'image/gif',
     'css': 'text/css',
     'js': 'application/javascript',
-    'html': 'text/html'
+    'html': 'text/html',
+    do: 'text/plain'
 }
 
 http.createServer(function (req, res) {
