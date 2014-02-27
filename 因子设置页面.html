@@ -4,8 +4,145 @@
     <meta charset="utf-8"/>
     <title>因子设置页面</title>
     <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <style>
+        .tab-pane {
+            padding: 12px 0;
+        }
+    </style>
 </head>
 <body>
 
+<div class="container">
+    <h2>因子信息设置</h2>
+
+    <form class="form-horizontal" role="form" action="/test/test.do" method="post" data-send-type="ajax">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">因子名称</label>
+
+            <div class="col-sm-7">
+                <input type="text" name="factor" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">数据模型标识</label>
+
+            <div class="col-sm-7 form-control-static">用户红包信息数据</div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">描述信息</label>
+
+            <div class="col-sm-7 form-control-static">
+                <textarea class="form-control" name="describe" rows="4"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
+
+<hr/>
+
+<!--Start 标签信息设置-->
+<div class="container">
+    <h2>标签信息设置</h2>
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="active"><a href=".J-tab-业务模型" data-toggle="tab">业务模型</a></li>
+        <li><a href=".J-tab-业务分类" data-toggle="tab">业务分类</a></li>
+        <li><a href=".J-tab-维护组织" data-toggle="tab">维护组织</a></li>
+        <li><a href=".J-tab-其它" data-toggle="tab">其它</a></li>
+        <li><a href=".J-tab-渠道" data-toggle="tab">渠道</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active J-tab-业务模型">
+            <a href="#" class="btn btn-sm btn-info" data-toggle="popover" data-placement="auto"
+               title="交易退回业务"
+               data-content="无说明  创建时间：2013-10-11" role="button">交易退回业务</a>
+        </div>
+        <div class="tab-pane active J-tab-业务分类">
+        </div>
+        <div class="tab-pane active J-tab-维护组织">
+        </div>
+        <div class="tab-pane active J-tab-其它">
+        </div>
+        <div class="tab-pane active J-tab-渠道">
+        </div>
+    </div>
+</div>
+<!--End 标签信息设置-->
+
+<hr/>
+
+<!--Start 因子需要配置的入参信息-->
+<style>
+    .test-param input.form-control {
+        width: 80px;
+        text-align: center;
+    }
+</style>
+<div class="container">
+    <h2>因子需要配置的入参信息</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <th width="5%">ID</th>
+            <th width="30%">参数名称</th>
+            <th width="65%">描述</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>M到N天的N笔交易</td>
+            <td>M到N天内最近N笔某状态的交易信息，M和N配置整数，M=-1，N=0表示最近一天，请在N笔信息上配置整数，在状态上配置1:2:3</td>
+        </tr>
+    </table>
+    <p>固定参数设置（如果设置则在因子配置页面不能修改，为空可以在因子页面修改）</p>
+
+    <form class="form-horizontal" role="form" action="/test/test.do" method="post" data-send-type="ajax">
+        <div class="test-param form-inline">
+            查询最近 <input type="text" name="m" class="form-control"/>
+            天到 <input type="text" name="n" class="form-control"/>
+            天的最近 <input type="text" name="count" class="form-control"/> 笔交易
+            <button type="submit" class="btn btn-primary">测试信息</button>
+        </div>
+    </form>
+</div>
+<!--End 因子需要配置的入参信息-->
+
+<hr/>
+
+<!--Start 可配置参数信息-->
+<div class="container">
+    <h2>可配参数信息</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th width="5%">ID</th>
+            <th width="20%">参数名称</th>
+            <th width="30%">描述</th>
+            <th width="30%">可选值配置</th>
+            <th width="15%">操作</th>
+        </tr>
+        <tr>
+            <td>1123</td>
+            <td>体现金额</td>
+            <td>N笔信息的体现总金额</td>
+            <td></td>
+            <td>
+                <button type="button" class="btn btn-link btn-xs">删除</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<!--End 可配置参数信息-->
+
+
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="src/ace.js"></script>
+<script src="ajax.js"></script>
+
+<script>
+    $(document.body).popover({
+        selector: '[data-toggle=popover]',
+        trigger: 'hover'
+    })
+</script>
 </body>
 </html>
