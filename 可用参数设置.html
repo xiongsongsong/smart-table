@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/css/bootstrap.min.css"/>
 </head>
 <body>
+
+<!--Start 可用参数设置结束-->
 <div class="container">
     <h2>可用参数设置</h2>
 
@@ -30,29 +32,109 @@
             <div class="col-sm-7">
                 <input style="font-family: verdana;" type="text" name="regexp" class="form-control"/>
             </div>
-        </div><div class="form-group">
+        </div>
+        <div class="form-group">
             <label class="col-sm-3 control-label">返回类型</label>
 
             <div class="col-sm-7">
                 <select name="return_type" class="form-control">
-                    <option value="">整形</option>
-                    <option value="">布尔值</option>
-                    <option value="">字符串</option>
-                    <option value="">整形数组</option>
+                    <option value="整形">整形</option>
+                    <option value="布尔值">布尔值</option>
+                    <option value="字符串">字符串</option>
+                    <option value="整形数组">整形数组</option>
                 </select>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-3 control-label">入参类型</label>
+            <label class="col-sm-3 control-label">数据字典</label>
 
             <div class="col-sm-7">
-                <select class="form-control" name="param_type">
-                    <option value="可配置参数">可配置参数</option>
-                    <option value="可配置参数2">可配置参数2</option>
-                </select>
+                <textarea name="data_dict" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">值域</label>
+
+            <div class="col-sm-7">
+                <textarea name="data_value" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">参数脚本</label>
+
+            <div class="col-sm-7">
+                <textarea name="param_scripting" class="hide" data-srouce="#param_scripting"/></textarea>
+                <div id="param_scripting" class="form-control" style="width:100%;height:100px">//请填写参数脚本
+query.setBegin(param.get('param1'));//取得最近N笔
+query.setEnd(-7);//暂住证
+query.setBegin(0);</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3 control-label">数据准备脚本</label>
+
+            <div class="col-sm-7">
+                <textarea name="ready_scripting" class="hide" data-srouce="#ready_scripting"/></textarea>
+<div id="ready_scripting" class="form-control" style="width:100%;height:100px">//请填写参数脚本
+query.setBegin(param.get('param1'));//取得最近N笔
+query.setEnd(-7);//暂住证
+query.setBegin(0);</div>
+            </div>
+        </div>
+        <p class="text-center">
+            <button type="submit" class="btn btn-default">保存信息</button>
+        </p>
+    </form>
+</div>
+<!--End 可用参数设置结束-->
+
+
+<hr/>
+<!--Start 测试参数设置-->
+<div class="container">
+    <style>
+        .test-param input.form-control{
+            width: 80px;
+            text-align:center ;
+        }
+    </style>
+    <form class="form-horizontal" role="form" action="/test/test.do" method="post" data-send-type="ajax">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">测试参数设置</label>
+            <div class="col-sm-7">
+                <div class="alert alert-info">M到N天内最近N笔某状态的交易信息，M和N配置整数，M=-1，N=0表示最近一天，请在N笔信息上配置整数</div>
+                <div class="test-param form-inline">
+                查询最近 <input type="text" class="form-control" />
+                    天到 <input type="text" class="form-control" />
+                    天的最近 <input type="text" class="form-control" /> 笔交易
+                    <button type="submit" class="btn btn-primary">测试信息</button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">测试结果</label>
+
+            <div class="col-sm-7">
+                <textarea class="form-control" cols="30" rows="2"></textarea>
             </div>
         </div>
     </form>
 </div>
+<!--End 测试参数设置-->
+
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="ajax.js"></script>
+<script src="src/ace.js"></script>
+
+<script>
+    var editor = ace.edit("param_scripting");
+    editor.getSession().setMode("ace/mode/javascript");
+    $('#param_scripting').data('editor', editor)
+    var ready_scripting_editor = ace.edit("ready_scripting");
+    ready_scripting_editor.getSession().setMode("ace/mode/javascript");
+    $('#ready_scripting').data('editor', ready_scripting_editor)
+</script>
 </body>
 </html>
