@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>因子测试</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/css/bootstrap.min.css"/>
+</head>
+<body>
+<!--Start 测试参数设置-->
+<div class="container">
+    <style>
+        .test-param input.form-control{
+            width: 80px;
+            text-align:center ;
+        }
+    </style>
+    <form class="form-horizontal" role="form" action="/test/test.do" method="post" data-send-type="ajax">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">测试参数设置</label>
+            <div class="col-sm-7">
+                <p class="alert alert-info">测试的时候请输入支付宝帐号和用户的交易号</p>
+                <div class="test-param form-inline">
+                    支付宝帐号 <input type="text" name="account" class="form-control" />
+                    用户交易号 <input type="text" name="id" class="form-control" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">因子参数信息</label>
+
+            <div class="col-sm-7">
+                <p class="alert alert-info">M到N天内最近N笔某状态的交易信息，M和N配置整数，M=-1，N=0表示最近一天，请在N笔信息上配置整数</p>
+                <div class="test-param form-inline">
+                    查询最近 <input type="text" name="m" class="form-control" />
+                    天到 <input type="text" name="n" class="form-control" />
+                    天的最近 <input type="text" name="count" class="form-control" /> 笔交易
+                    <button type="submit" class="btn btn-primary">测试信息</button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">测试结果</label>
+
+            <div class="col-sm-7">
+                <textarea class="form-control" cols="30" rows="5"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
+<!--End 测试参数设置-->
+
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="ajax.js"></script>
+</body>
+</html>
