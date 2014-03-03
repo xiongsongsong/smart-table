@@ -1,0 +1,47 @@
+.tag {
+    display: inline-block;
+    font-size: 12px;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    color: #555;
+}
+
+.tag:hover {
+    background-color: #f2f2f2;
+}
+
+.tag strong,
+.tag b {
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.tag b:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.tag strong {
+    padding-left: 8px;
+    padding-right: 4px;
+}
+
+.tag b {
+    padding-left: 4px;
+    padding-right: 8px;
+    border-left: solid 1px #ccc;
+}
+
+.relative {
+    position: relative;
+}
+
+.relative-search-right {
+    width: 180px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
