@@ -56,7 +56,8 @@
             <label class="col-sm-3 control-label">值域</label>
 
             <div class="col-sm-7">
-                <textarea name="data_value" class="form-control"></textarea>
+                <textarea name="data_value" class="form-control hide" data-srouce="#data_value"></textarea>
+                <div id="data_value" class="form-control" style="width:100%;height:180px">{}</div>
             </div>
         </div>
         <div class="form-group">
@@ -132,6 +133,11 @@ query.setBegin(0);</div>
     var editor = ace.edit("param_scripting");
     editor.getSession().setMode("ace/mode/javascript");
     $('#param_scripting').data('editor', editor)
+
+    var data_value_editor = ace.edit("data_value");
+    data_value_editor .getSession().setMode("ace/mode/json");
+    $('#data_value').data('editor', data_value_editor )
+
     var ready_scripting_editor = ace.edit("ready_scripting");
     ready_scripting_editor.getSession().setMode("ace/mode/javascript");
     $('#ready_scripting').data('editor', ready_scripting_editor)
